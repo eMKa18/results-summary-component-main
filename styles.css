@@ -43,3 +43,16 @@ Use transparency to get the colour variations necessary to match the design. Hin
     font-family: 'Hanken Grotesk';
     src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format(truetype);
 }
+
+:root {
+    --cc-font-family: 'Hanken Grotesk';
+    --cc-font-medium: 500;
+    --cc-font-bold: 700;
+    --cc-font-xbold: 800;
+    --cc-font-size: 18px;
+}
+
+body {
+    font-size: var(--cc-font-size);
+    font-family: var(--cc-font-family);
+}
