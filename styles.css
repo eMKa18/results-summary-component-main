@@ -55,4 +55,7 @@ Use transparency to get the colour variations necessary to match the design. Hin
 body {
     font-size: var(--cc-font-size);
     font-family: var(--cc-font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
