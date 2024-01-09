@@ -50,6 +50,13 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --cc-font-bold: 700;
     --cc-font-xbold: 800;
     --cc-font-size: 18px;
+
+    --cc-clr-reaction: hsl(0 100% 67%);
+    --cc-clr-memory: hsl(39 100% 56%);
+    --cc-clr-verbal: hsl(166 100% 37%);
+    --cc-clr-visual: hsl(234 85% 45%);
+
+    --cc-clr-actionable: hsl(224 30% 27%);
 }
 
 body {
@@ -58,4 +65,116 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+div.summary {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    border-radius: 1rem;
+    box-shadow: 1rem .5rem 1rem;
+}
+
+div.score-panel {
+    background-color: lightblue;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;;
+    border-top-left-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div.result-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem
+}
+
+div.result-description p.descryption {
+    
+}
+
+div.summary-panel {
+    background-color: white;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1;
+    
+}
+
+div.reaction {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+div.memory {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+div.verbal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+div.visual {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+div.summary-component {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+p.reaction-section-title {
+    color: var(--cc-clr-reaction);
+}
+
+p.memory-section-title {
+    color: var(--cc-clr-memory);
+}
+
+p.verbal-section-title {
+    color: var(--cc-clr-verbal);
+}
+
+p.visual-section-title {
+    color: var(--cc-clr-visual);
+}
+
+.detailed-score {
+    color: black;
+}
+
+.max-result {
+    color: gray;
+}
+
+.continue {
+    background-color: var(--cc-clr-actionable);
+    color: white;
+    border-radius: 1rem;
+}
+
+footer.attribution {
+    padding-top: 1rem;
 }
