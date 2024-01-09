@@ -56,7 +56,18 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --cc-clr-verbal: hsl(166 100% 37%);
     --cc-clr-visual: hsl(234 85% 45%);
 
-    --cc-clr-actionable: hsl(224 30% 27%);
+    --cc-clr-actionable: hsla(224 30% 27% );
+    
+    --cc-clr-circle-1: hsla(256 72% 46% 1);
+    --cc-clr-circle-0: hsla(241 72% 46% 0);
+    
+    --cc-clr-bg-1: hsl(252 100% 67%);
+    --cc-clr-bg-2: hsl(241 81% 54%);
+
+    --cc-clr-white: hsl(0 0% 100%);
+    --cc-clr-pale-blue: hsl(221 100% 96%);
+    --cc-clr-light-lavender: hsl(241 100% 89%);
+    --cc-clr-dark-gray-blue: hsl(224 30% 27%);
 }
 
 body {
@@ -67,37 +78,72 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: var(--cc-clr-pale-blue);
 }
 
 div.summary {
-    background-color: white;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-    border-radius: 1rem;
-    box-shadow: 1rem .5rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 30px 60px 0px rgba(61, 108, 236, 0.15);
+    background: var(--cc-clr-white);
 }
 
 div.score-panel {
-    background-color: lightblue;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border-top-right-radius: 1rem;;
-    border-top-left-radius: 1rem;
+    background-image: linear-gradient(var(--cc-clr-bg-1), var(--cc-clr-bg-2));
+    color: white;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
 
+h3.your-result {
+    color: var(--cc-clr-light-lavender);
+}
+
+h1.score {
+    color: var(--cc-clr-white);
+    font-size: 72px;
+    line-height: 100%;
+    font-weight: var(--cc-font-xbold);
+}
+
+p.total {
+    color: var(--cc-clr-light-lavender);
+    font-weight: var(--cc-font-bold);
+}
+
+p.result {
+    font-size: 32px;
+    font-weight: var(--cc-font-bold);
+    color: var(--cc-clr-white);
+}
+
 div.result-description {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem
+    margin: 2rem;
+    font-size: var(--cc-font-size);
 }
 
-div.result-description p.descryption {
-    
+div.circle-result {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    /* background-image: radial-gradient(circle at center in hsl longer hue, var(--cc-clr-circle-1), var(--cc-clr-circle-0)); */
+    border-radius: 50%;
+    background-color: radial-gradient(circle at center in hsl longer hue, var(--cc-clr-circle-1), var(--cc-clr-circle-0));
+}
+
+p.descryption {
+    font-size: var(--cc-font-size);
+    color: var(--cc-clr-light-lavender);
+    font-weight: var(--cc-font-medium)
 }
 
 div.summary-panel {
@@ -143,6 +189,7 @@ div.summary-component {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    font-size: var(--cc-font-size);
 }
 
 p.reaction-section-title {
@@ -171,8 +218,10 @@ p.visual-section-title {
 
 .continue {
     background-color: var(--cc-clr-actionable);
-    color: white;
-    border-radius: 1rem;
+    color: var(--cc-clr-white);
+    border-radius: 3rem;
+    height: 3rem;
+    font-size: var(--cc-font-size);
 }
 
 footer.attribution {
