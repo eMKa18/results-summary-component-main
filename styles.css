@@ -56,10 +56,10 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --cc-clr-verbal: hsl(166 100% 37%);
     --cc-clr-visual: hsl(234 85% 45%);
 
-    --cc-clr-actionable: hsla(224 30% 27% );
+    --cc-clr-actionable: hsl(224 30% 27%);
     
-    --cc-clr-circle-1: hsla(256 72% 46% 1);
-    --cc-clr-circle-0: hsla(241 72% 46% 0);
+    --cc-clr-circle-1: hsl(256 72% 46% / 1);
+    --cc-clr-circle-0: hsl(241 72% 46% / 0);
     
     --cc-clr-bg-1: hsl(252 100% 67%);
     --cc-clr-bg-2: hsl(241 81% 54%);
@@ -93,7 +93,7 @@ div.summary {
 
 div.score-panel {
     background-image: linear-gradient(var(--cc-clr-bg-1), var(--cc-clr-bg-2));
-    color: white;
+    color: var(--cc-clr-white);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -116,7 +116,8 @@ div.circle-result {
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    background-image: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0.00) 100%, rgba(37, 33, 201, 0.00) 100%);
+    background-image: 
+        linear-gradient(180deg, var(--cc-clr-circle-1) 0%, var(--cc-clr-circle-0) 100%, var(--cc-clr-circle-0) 100%);
 }
 
 h1.score {
@@ -153,7 +154,7 @@ p.description {
 }
 
 div.summary-panel {
-    background-color: white;
+    background-color: var(--cc-clr-white);
     border-bottom-right-radius: 1rem;
     border-top-right-radius: 1rem;
     margin: 2rem;
@@ -166,6 +167,9 @@ div.reaction {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: hsl(0 100% 67% / .1);
 }
 
 div.memory {
@@ -173,6 +177,9 @@ div.memory {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: hsl(39 100% 56% / .1);
 }
 
 div.verbal {
@@ -180,6 +187,9 @@ div.verbal {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: hsl(166 100% 37% / .1);
 }
 
 div.visual {
@@ -187,6 +197,9 @@ div.visual {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: hsl(234 85% 45% / .1);
 }
 
 div.summary-component {
