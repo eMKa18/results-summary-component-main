@@ -44,6 +44,15 @@ Use transparency to get the colour variations necessary to match the design. Hin
     src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format(truetype);
 } */
 
+/* @font-face {
+    font-family: 'Hanken Grotesk';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format(truetype);
+} */
+
+/* https://github.com/kevin-powell/results-summary-component-main */
+
 :root {
     --cc-font-family: 'Hanken Grotesk';
     --cc-font-medium: 500;
@@ -68,6 +77,7 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --cc-clr-pale-blue: hsl(221 100% 96%);
     --cc-clr-light-lavender: hsl(241 100% 89%);
     --cc-clr-dark-gray-blue: hsl(224 30% 27%);
+    
 }
 
 body {
