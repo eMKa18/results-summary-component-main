@@ -265,6 +265,16 @@ img {
     color: var(--clr-dark-grey-blue);
 }
 
+.button {
+    color: var(--clr-white);
+    line-height: 1;
+    background: var(--clr-dark-grey-blue);
+    padding: 1rem 2rem; /* top/bottom left/right */
+    border: 0;
+    border-radius: 100vw; /* radius based on width of component */
+    cursor: pointer;
+}
+
 footer.attribution {
     padding-top: 1rem;
 }
