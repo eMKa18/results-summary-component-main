@@ -102,6 +102,17 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --padding: 2.5rem;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-normal);
