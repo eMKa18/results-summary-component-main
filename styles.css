@@ -100,6 +100,7 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --gradient-circle: linear-gradient(var(--clr-violet-blue), hsla(var(--base-persian-blue) / 0));
 
     --padding: 2.5rem;
+    --border-radius: 2rem;
 }
 
 *,
@@ -119,9 +120,27 @@ body {
     color: var(--clr-dark-grey-blue);
 }
 
+@media (min-width: 650px) { /* if width of window is 650px or bigger change layout */
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+}
+
 .result-summary {
     display: grid;
-    max-width: 35rem;
+    max-width: 45rem;
+}
+
+@media (min-width: 650px) { 
+    .result-summary {
+        margin: 1rem;
+        grid-template-columns: 1fr 1fr;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: .5rem 1rem 3rem hsl(var(--base-dark-gray-blue) / .3);
+    }
 }
 
 .results {
@@ -130,12 +149,17 @@ body {
     
     padding: var(--padding) calc(var(--padding) * 1.5); /* top/bottom, left/right */
     background: var(--gradient-primary);
-    --border-radius: 2rem;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     
     display: grid;
     align-content: start;
     gap: 2rem;
+}
+
+@media (min-width: 650px) {
+    .results {
+        border-radius: var(--border-radius);
+    }
 }
 
 .title {
