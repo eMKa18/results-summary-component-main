@@ -1,4 +1,3 @@
-let res = undefined;
 function getData() {
     fetch('./data.json')
         .then((response) => response.json())
