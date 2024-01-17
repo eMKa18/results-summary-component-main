@@ -68,8 +68,6 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --base-memory: 39 100% 56%;
     --base-verbal: 166 100% 37%;
     --base-visual: 234 85% 45%;
-
-    --base-actionable: 224 30% 27%;
     
     --base-violet-blue: 256 72% 46%;
     --base-persian-blue: 241 72% 46%;
@@ -112,17 +110,21 @@ body {
 
 .result-summary {
     display: grid;
-    max-width: 46rem;
+    max-width: 35rem;
 }
 
 .results {
-    color: hsl(var(--base-white), .7);
+    color: hsla(var(--base-white) / .7);
     text-align: center;
     --padding: 2.5rem;
     padding: var(--padding) calc(var(--padding) * 1.5); /* top/bottom, left/right */
     background: var(--gradient-primary);
     --border-radius: 2rem;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
+    
+    display: grid;
+    align-content: start;
+    gap: 2rem;
 }
 
 .title {
@@ -136,17 +138,17 @@ body {
     width: 12rem;
     margin: auto;
     background: var(--gradient-circle);
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1; /* makes component a square */
     border-radius: 50%;
+    color: hsla(var(--base-white) / .5);
 }
 
 .main-score span {
+    display: block;
     font-size: var(--font-size-xxlarge);
     font-weight: var(--font-weight-xbold);
     line-height: 1;
     color: var(--clr-white);
-    
-    display: block;
 }
 
 .result-details {
@@ -159,6 +161,10 @@ body {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
     color: var(--clr-white);
+}
+
+p {
+    color: hsla(var(--base-white) / .7);
 }
 
 footer.attribution {
