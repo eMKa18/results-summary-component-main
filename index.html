@@ -13,8 +13,10 @@
   <title>Frontend Mentor | Results summary component</title>
 
   <link rel="stylesheet" href="styles.css">
+  
 </head>
 <body>
+  <script src="get-data.js"></script>
   <main>
     <div class="result-summary">
       <div class="results">
@@ -33,38 +35,38 @@
         <div class="summary-section">
           <div class="reaction">
             <div class="icon-item">
-              <img src="/assets/images/icon-reaction.svg" alt="">
-              <h3 class="summary-title-reaction">Reaction</h3>
+              <img id="reaction-img">
+              <h3 class="summary-title-reaction" id="summary-title-reaction"></h3>
             </div>
             <p class="summary-score">
-              <span>80</span> / 100
+              <span id="reaction-score"></span> / 100
             </p>
           </div>
           <div class="memory">
             <div class="icon-item">
-              <img src="/assets/images/icon-memory.svg" alt="">
-              <h3 class="summary-title-memory">Memory</h3>
+              <img id="memory-img">
+              <h3 class="summary-title-memory" id="summary-title-memory"></h3>
             </div>
             <p class="summary-score">
-              <span>92</span> / 100
+              <span id="memory-score"></span> / 100
             </p>
           </div>
           <div class="verbal">
             <div class="icon-item">
-              <img src="/assets/images/icon-verbal.svg" alt="">
-              <h3 class="summary-title-verbal">Verbal</h3>
+              <img id="verbal-img">
+              <h3 class="summary-title-verbal" id="summary-title-verbal"></h3>
             </div>
             <p class="summary-score">
-              <span>61</span> / 100
+              <span id="verbal-score"></span> / 100
             </p>
           </div>
           <div class="visual">
             <div class="icon-item">
-              <img src="/assets/images/icon-visual.svg" alt="">
-              <h3 class="summary-title-visual">Visual</h3>
+              <img id="visual-img">
+              <h3 class="summary-title-visual" id="summary-title-visual"></h3>
             </div>
             <p class="summary-score">
-              <span>72</span> / 100
+              <span id="visual-score"></span> / 100
             </p>
           </div>
         </div>
