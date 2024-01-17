@@ -275,6 +275,11 @@ img {
     cursor: pointer;
 }
 
+.button:hover,
+.button:focus {
+    background: var(--gradient-primary);
+}
+
 footer.attribution {
     padding-top: 1rem;
 }
