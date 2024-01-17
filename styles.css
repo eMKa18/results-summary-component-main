@@ -64,7 +64,7 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --font-size-xlarge: 2rem;
     --font-size-xxlarge: 5rem;
 
-    --base-reaction: 0, 100%, 67%;
+    --base-reaction: 0 100% 67%;
     --base-memory: 39 100% 56%;
     --base-verbal: 166 100% 37%;
     --base-visual: 234 85% 45%;
@@ -99,7 +99,7 @@ Use transparency to get the colour variations necessary to match the design. Hin
     --gradient-primary: linear-gradient(var(--clr-slate-blue), var(--clr-royal-blue));
     --gradient-circle: linear-gradient(var(--clr-violet-blue), hsla(var(--base-persian-blue) / 0));
 
-    
+    --padding: 2.5rem;
 }
 
 body {
@@ -116,7 +116,7 @@ body {
 .results {
     color: hsla(var(--base-white) / .7);
     text-align: center;
-    --padding: 2.5rem;
+    
     padding: var(--padding) calc(var(--padding) * 1.5); /* top/bottom, left/right */
     background: var(--gradient-primary);
     --border-radius: 2rem;
@@ -140,7 +140,7 @@ body {
     background: var(--gradient-circle);
     aspect-ratio: 1 / 1; /* makes component a square */
     border-radius: 50%;
-    color: hsla(var(--base-white) / .5);
+    color: hsla(var(--base-white) / .6);
 }
 
 .main-score span {
@@ -165,6 +165,93 @@ body {
 
 p {
     color: hsla(var(--base-white) / .7);
+}
+
+.summary {
+    padding: var(--padding);
+
+    display: grid;
+    align-content: start;
+    gap: 2rem;
+}
+
+.summary-section {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+.reaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(var(--base-reaction) / .2);
+}
+
+.memory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(var(--base-memory) / .2);
+}
+
+.verbal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(var(--base-verbal) / .2);
+}
+
+.visual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(var(--base-visual) / .2);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.summary-title-reaction {
+    color: var(--clr-reaction);
+}
+
+.summary-title-memory {
+    color: var(--clr-memory);
+}
+
+.summary-title-verbal {
+    color: var(--clr-verbal);
+}
+
+.summary-title-visual {
+    color: var(--clr-visual);
+}
+
+.summary-score {
+    font-weight: var(--font-weight-xbold);
+    color: hsla(var(--base-dark-gray-blue) / .5);
+}
+
+.summary-score span {
+    color: var(--clr-dark-grey-blue);
 }
 
 footer.attribution {
